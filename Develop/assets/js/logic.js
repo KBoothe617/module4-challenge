@@ -34,3 +34,7 @@ function toggleMode() {
         updateCircleColor('light-mode');
     }
 }
+
+document.getElementById('toggleMode').addEventListener('click', toggleMode);
+
+applyMode();
