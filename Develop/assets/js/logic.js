@@ -8,3 +8,9 @@ function readFromLocalStorage(key) {
 function writeToLocalStorage(key, value) {
     localStorage.setItem(key, value);
 }
+
+function applyMode() {
+    const savedMode = readFromLocalStorage('mode') || 'light-mode';
+    document.body.classList.add(savedMode);
+    updateCircleColor(savedMode);
+}
