@@ -22,3 +22,15 @@ function updateCircleColor(mode) {
         document.documentElement.style.setProperty('--circle-color', 'var(--circle-color-dark');
     }
 }
+
+function toggleMode() {
+    if (document.body.classList.contains('light-mode')) {
+        document.body.classList.replace('light-mode', 'dark-mode');
+        writeToLocalStorage('mode', 'dark-mode');
+        updateCircleColor('dark-mode');
+    } else {
+        document.body.classList.replace('dark-mode', 'light-mode');
+        writeToLocalStorage('mode', 'light-mode');
+        updateCircleColor('light-mode');
+    }
+}
