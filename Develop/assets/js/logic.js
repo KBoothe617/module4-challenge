@@ -14,3 +14,11 @@ function applyMode() {
     document.body.classList.add(savedMode);
     updateCircleColor(savedMode);
 }
+
+function updateCircleColor(mode) {
+    if (mode === 'light-mode') {
+        document.documentElement.style.setProperty('--circle-color', 'var(--circle-color-light)');
+    } else {
+        document.documentElement.style.setProperty('--circle-color', 'var(--circle-color-dark');
+    }
+}
